@@ -1,13 +1,9 @@
 package pro.sky.skyprocalculator.exceptions;
 
-import org.springframework.http.HttpStatus;
-import org.springframework.web.bind.annotation.ResponseStatus;
-import org.springframework.web.client.HttpStatusCodeException;
 
-@ResponseStatus(HttpStatus.BAD_REQUEST)
-public class NotEnoughDataException extends HttpStatusCodeException {
+public class NotEnoughDataException extends RuntimeException {
 
     public NotEnoughDataException(String message) {
-        super(HttpStatus.BAD_REQUEST, message);
+        super(message);
     }
 }
